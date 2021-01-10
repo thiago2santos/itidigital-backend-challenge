@@ -10,7 +10,7 @@ import br.com.vagasrubao.model.Password;
 import br.com.vagasrubao.services.PasswordService;
 
 @RestController
-@RequestMapping(value = "/senha")
+@RequestMapping(value = "/checkpasswd")
 public class PasswordController {
 
 	private PasswordService passwordService;
@@ -21,10 +21,10 @@ public class PasswordController {
 
 	@GetMapping("/{value}")
 	public ResponseEntity<Password> teste(@PathVariable String value) {
-
+		System.out.println(value);
 		boolean isValid = passwordService.check(value);
 		return ResponseEntity.ok().body(new Password(isValid));
-		
+
 	}
 
 }

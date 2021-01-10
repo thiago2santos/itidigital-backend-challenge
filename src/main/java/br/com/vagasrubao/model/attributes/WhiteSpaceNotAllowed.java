@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 import br.com.vagasrubao.interfaces.PasswordAtrribute;
 
-public class WhiteSpace implements PasswordAtrribute {
+public class WhiteSpaceNotAllowed implements PasswordAtrribute {
 
 	@Override
 	public boolean checkAttribute(String value) {

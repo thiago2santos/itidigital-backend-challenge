@@ -3,12 +3,15 @@ package br.com.vagasrubao.services;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class PasswordServiceTest {
+public class PasswordServiceTest {
+
+	public PasswordServiceTest() {
+	}
 
 	@Test
-	void test() {
+	public void CheckPasswordTest() {
 //		fail("Not yet implemented");
 		PasswordService passwordService = new PasswordService();
 
@@ -18,7 +21,7 @@ class PasswordServiceTest {
 		assertFalse(passwordService.check("AAAbbbCc"));
 		assertFalse(passwordService.check("AbTp9!foo"));
 		assertFalse(passwordService.check("AbTp9!foA"));
-		assertFalse(passwordService.check("AbTp9 fok"));
+		assertFalse(passwordService.check("AbTp9f ok"));
 		assertTrue(passwordService.check("AbTp9!fok"));
 	}
 

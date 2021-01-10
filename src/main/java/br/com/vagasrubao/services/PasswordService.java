@@ -13,6 +13,7 @@ import br.com.vagasrubao.model.attributes.MinLength;
 import br.com.vagasrubao.model.attributes.SpecialCharacter;
 import br.com.vagasrubao.model.attributes.UniqueCharacter;
 import br.com.vagasrubao.model.attributes.Uppercase;
+import br.com.vagasrubao.model.attributes.WhiteSpaceNotAllowed;
 import br.com.vagasrubao.utils.PasswordChecker;
 
 @Service
@@ -27,6 +28,7 @@ public class PasswordService {
 		attributes.add(new SpecialCharacter());
 		attributes.add(new UniqueCharacter());
 		attributes.add(new Uppercase());
+		attributes.add(new WhiteSpaceNotAllowed());
 
 		Checker passwordChecker = new PasswordChecker();
 
